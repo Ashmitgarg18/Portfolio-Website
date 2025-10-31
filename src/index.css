@@ -36,15 +36,15 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  /*border-radius: 8px;*/
+  /*border: 1px solid transparent;*/
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  /*background-color: #1a1a1a;*/
   cursor: pointer;
-  transition: border-color 0.25s;
+  /*transition: border-color 0.25s;*/
 }
 button:hover {
   border-color: #646cff;
@@ -71,3 +71,22 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+@keyframes waveFlow {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.wave-bg {
+  background: linear-gradient(
+    120deg,
+    rgba(18, 18, 18, 1) 30%,
+    rgba(40, 40, 40, 0.7) 50%,
+    rgba(18, 18, 18, 1) 70%
+  );
+  background-size: 200% 100%;
+  animation: waveFlow 8s ease-in-out infinite;
+}

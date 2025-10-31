@@ -16,7 +16,7 @@ export default function Portfolio() {
   };
 
   const navItems = [
-    'Intro', 'About', 'Work', 'Experience', 'Education', 'Stack', 'Blog', 'Contact'
+     'About', 'Projects', 'Experience', 'Education', 'Stack', 'Blog', 'Contact'
   ];
 
   const projects = [
@@ -238,14 +238,11 @@ export default function Portfolio() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-gray-800"
+                className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors rounded-lg"
               >
                 {item}
               </button>
               ))}
-            <button className="ml-2 p-2 text-gray-400 hover:text-white transition-colors">
-              ✕
-            </button>
           </div>
         </div>
       </nav>
@@ -294,14 +291,14 @@ export default function Portfolio() {
 
             <div className="flex items-center gap-6">
               <a
-                href="https://x.com/gargashtwt"
+                href="https://x.com/gargashtwt" target="_blank"
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors no-underline"
               >
                 <Twitter size={15} />
                 Twitter
               </a>
               <a
-                href="https://www.linkedin.com/in/ashmit-garg/"
+                href="https://www.linkedin.com/in/ashmit-garg/" target="_blank"
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors no-underline"
               >
                 <Linkedin size={15} />
@@ -530,31 +527,19 @@ export default function Portfolio() {
                   </a>
                 </div>
 
-  {/* Phone */}
-  {/*<div className="grid grid-cols-[100px_1fr] items-center">
-    <h3 className="text-base text-left font-semibold text-white">Phone:</h3>
-    <a
-      href="tel:1234567890"
-      className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-    >
-      <Phone size={18} />
-      (123) 456 7890
-    </a>
-  </div>*/}
-
   {/* Socials */}
                 <div className="grid grid-cols-[100px_1fr] items-start">
                   <h3 className="text-base font-semibold text-left text-white">Socials:</h3>
                   <div className="space-y-2">
                     <a
-                      href="https://x.com/gargashtwt"
+                      href="https://x.com/gargashtwt" target="_blank"
                       className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                     >
                       <Twitter size={18} />
                       Twitter
                     </a>
                     <a
-                      href="https://www.linkedin.com/in/ashmit-garg/"
+                      href="https://www.linkedin.com/in/ashmit-garg/" target="_blank"
                       className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                     >
                       <Linkedin size={18} />
@@ -606,7 +591,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        
+
 
 
     {/* Footer */}
