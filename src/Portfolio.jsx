@@ -232,20 +232,22 @@ export default function Portfolio() {
     <div className="min-h-screen bg-[#121212] text-white">
     {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#121212] backdrop-blur-md border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-center gap-1">
-            {navItems.map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors rounded-lg"
-              >
-                {item}
-              </button>
-              ))}
-          </div>
-        </div>
-      </nav>
+  <div className="max-w-7xl mx-auto px-6 py-4">
+    <div className="flex items-center justify-center gap-1 nav-wave">
+      {navItems.map((item, index) => (
+        <button
+          key={item}
+          onClick={() => scrollToSection(item.toLowerCase())}
+          className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors rounded-lg"
+        >
+          {item}
+        </button>
+      ))}
+    </div>
+  </div>
+</nav>
+
+
 
     {/* Hero Section */}
       <section id="intro" className="pt-28 pb-12 px-6">
