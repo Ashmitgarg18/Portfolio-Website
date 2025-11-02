@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function ReadingSection() {
+export default function ReadingSection({ title, feedUrl, noBorder = false }) {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -8,13 +8,11 @@ export default function ReadingSection() {
     const fetchBooks = async () => {
       try {
         const response = await fetch(
-          "https://api.codetabs.com/v1/proxy?quest=https://oku.club/rss/collection/j06WR"
+          `https://api.codetabs.com/v1/proxy?quest=${feedUrl}`
         );
         const xmlText = await response.text();
-
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-
         const items = Array.from(xmlDoc.querySelectorAll("item"));
 
         const parsedBooks = items.map((item) => ({
@@ -39,17 +37,21 @@ export default function ReadingSection() {
     };
 
     fetchBooks();
-  }, []);
+  }, [feedUrl]);
 
   return (
-    <section id="reading" className="py-20 px-6 bg-[#121212] border-t border-gray-800">
+    <section
+      className={`py-20 px-6 bg-[#121212] ${
+        noBorder ? "" : "border-t border-gray-800"
+      }`}
+    >
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-10 text-white">Reading</h2>
+        <h2 className="text-4xl font-bold mb-10 text-white">{title}</h2>
 
         {loading ? (
           <p className="text-gray-500">Fetching your reading list...</p>
         ) : books.length === 0 ? (
-          <p className="text-gray-500">No books found in your Oku collection.</p>
+          <p className="text-gray-500">No books found in this collection.</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
             {books.map((book, idx) => (

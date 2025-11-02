@@ -240,44 +240,6 @@ const handleSubmit = (e) => {
 
 return (
   <div className="min-h-screen bg-[#121212] text-white">
-    {/* Navigation */}
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#121212] backdrop-blur-md border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-center gap-1 nav-wave">
-          {/*{navItems.map((item, index) => (
-            <button
-              key={item}
-              onClick={() => scrollToSection(item.toLowerCase())}
-              className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors rounded-lg"
-            >
-              {item}
-            </button>
-            ))}*/}
-          {navItems.map((item, index) => (
-            item.path ? (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors rounded-lg"
-              >
-                {item.name}
-              </Link>
-            ) : (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.name.toLowerCase())}
-                className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors rounded-lg"
-              >
-                {item.name}
-              </button>
-            )
-          ))}
-
-        </div>
-      </div>
-    </nav>
-
-
 
     {/* Hero Section */}
     <section id="intro" className="pt-28 pb-12 px-6">
@@ -524,8 +486,6 @@ return (
       </div>
     </section>
 */}
-
-    <ReadingSection />
 
     {/* Contact Section */}
     <section id="contact" className="py-20 px-6 border-t border-gray-800">
