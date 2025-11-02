@@ -1,23 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Portfolio from './Portfolio.jsx'
-import {Routes, Route} from 'react-router-dom';
-import Blog from './Blog.jsx'
-
+import { useState } from "react";
+import "./App.css";
+import Portfolio from "./Portfolio.jsx";
+import Blog from "./Blog.jsx";
+import Reading from "./Reading.jsx";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <Routes>
+      <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/reading" element={<Reading />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

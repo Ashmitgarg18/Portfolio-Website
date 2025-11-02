@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Download, Mail, MapPin, Twitter, Linkedin, ExternalLink, ArrowRight, ArrowUpRight, Phone, Instagram } from 'lucide-react';
 import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
+import ReadingSection from "./ReadingSection.jsx";
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('intro');
@@ -23,8 +24,10 @@ export default function Portfolio() {
   { name: "Education" },
   { name: "Stack" },
   { name: "Blog", path: "/blog" },
-  { name: "Contact"},
+  { name: "Reading", path: "/reading" },
+  { name: "Contact" },
 ];
+
 
  const projects = [
   {
@@ -521,6 +524,9 @@ return (
       </div>
     </section>
 */}
+
+    <ReadingSection />
+
     {/* Contact Section */}
     <section id="contact" className="py-20 px-6 border-t border-gray-800">
       <div className="max-w-5xl mx-auto">

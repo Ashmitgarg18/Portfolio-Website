@@ -111,6 +111,10 @@ body {
 .nav-wave button:nth-child(7),
 .nav-wave a:nth-child(7) { animation-delay: 0.9s; }
 
+.nav-wave button:nth-child(8),
+.nav-wave a:nth-child(8) { animation-delay: 1.05s; }
+
+
 /* Optional subtle enhancement: smoother pop */
 .nav-wave button:hover,
 .nav-wave a:hover {
