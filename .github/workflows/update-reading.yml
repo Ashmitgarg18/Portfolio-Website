@@ -19,15 +19,15 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install fast-xml-parser node-fetch
+        run: npm install fast-xml-parser node-fetch@2
 
       - name: Fetch Oku RSS feeds
         run: |
           mkdir -p public/data
           node <<'EOF'
-          import fs from "fs";
-          import { XMLParser } from "fast-xml-parser";
-          import fetch from "node-fetch";
+          const fs = require("fs");
+          const fetch = require("node-fetch");
+          const { XMLParser } = require("fast-xml-parser");
 
           const FEEDS = {
             currentlyReading: "https://oku.club/rss/collection/j06WR",
@@ -40,29 +40,7 @@ jobs:
             const response = await fetch(url);
             const xml = await response.text();
             const data = parser.parse(xml);
-            const items = data.rss.channel.item || [];
+            const items = data.rss?.channel?.item || [];
             return items.map(i => ({
               title: i.title,
-              author: i["dc:creator"] || "Unknown Author",
-              link: i.link,
-              cover: i["oku:cover"] || null
-            }));
-          }
-
-          const main = async () => {
-            const currentlyReading = await fetchFeed(FEEDS.currentlyReading);
-            const read = await fetchFeed(FEEDS.read);
-            const result = { currentlyReading, read, lastUpdated: new Date().toISOString() };
-            fs.writeFileSync("public/data/books.json", JSON.stringify(result, null, 2));
-          };
-
-          main();
-          EOF
-
-      - name: Commit and push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/books.json
-          git commit -m "Auto-update reading data" || echo "No changes to commit"
-          git push
+              author: i["dc:]()
