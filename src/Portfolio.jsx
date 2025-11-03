@@ -64,6 +64,7 @@ export default function Portfolio() {
       period: 'July 2024 - Present',
       achievements: [
         'Increased user engagement 30% by designing real-time in-app chat (Firebase Realtime DB) supporting 10K+ concurrent users with reactions and group messaging.',
+        'Built and integrated timezone localization support across all backend services using Java’s java.time API, this enabled the company’s expansion from a UK-only system to a global platform, starting with India.',
         'Built fault-tolerant REST microservices (Java, Spring Boot) powering internal Admin Portal, cutting support resolution time 40% and removing manual DB queries.',
         'Delivered multi-currency support integrating Stripe and GoCardless with 5 new currencies; onboarded Cashfree for INR payments, enabling Indian market launch.',
         'Led CI/CD pipeline automation and production monitoring, improving uptime and reducing deployment effort 50%.',
@@ -148,28 +149,6 @@ export default function Portfolio() {
       color: 'bg-gray-600',
       logo: 'https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg',
     },
-  ];
-
-
-  const articles = [
-    {
-      title: 'The Future of Web Design: Trends to Watch in 2024',
-      publication: 'Web Design Journal, May 15, 2024',
-      description: 'An in-depth analysis of upcoming trends in web design, focusing on emerging technologies and design philosophies that are set to shape the future of the industry.',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80'
-    },
-    {
-      title: 'Responsive Design Best Practices',
-      publication: 'Modern Web Magazine, May 11, 2024',
-      description: 'An article outlining the best practices for creating responsive websites that perform well on all devices, ensuring a seamless user experience.',
-      image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80'
-    },
-    {
-      title: 'The Art of Minimalist Web Design',
-      publication: 'Modern Web Magazine, May 10, 2024',
-      description: 'A discussion on the principles of minimalist design, showcasing examples and providing tips on how to implement minimalist design effectively.',
-      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80'
-    }
   ];
 
   const [currentTime, setCurrentTime] = useState("");
