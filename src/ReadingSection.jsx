@@ -10,7 +10,7 @@ export default function ReadingSection({ section = "currentlyReading", title }) 
       try {
         const response = await fetch(
           "https://cdn.statically.io/gh/Ashmitgarg18/Portfolio-Website/main/public/data/books.json"
-        );
+          );
         const data = await response.json();
 
         if (section === "read") {
@@ -46,15 +46,15 @@ export default function ReadingSection({ section = "currentlyReading", title }) 
               day: "numeric",
             })}
           </p>
-        )}
+          )}
 
         {loading ? (
           <p className="text-gray-500">Loading your reading list...</p>
-        ) : books.length === 0 ? (
+          ) : books.length === 0 ? (
           <p className="text-gray-500">
             No books found in this section.
           </p>
-        ) : (
+          ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
             {books.map((book, idx) => (
               <a
@@ -70,25 +70,32 @@ export default function ReadingSection({ section = "currentlyReading", title }) 
                       src={book.cover}
                       alt={book.title}
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm italic">
-                      No cover available
+                      />
+                      ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm italic">
+                        No cover available
+                      </div>
+                      )}
                     </div>
-                  )}
-                </div>
 
-                <div className="p-4 text-left">
-                  <h3 className="text-base font-semibold text-white group-hover:text-[#b8ff6a] transition-colors truncate">
-                    {book.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm">{book.author}</p>
-                </div>
-              </a>
-            ))}
+                    <div className="p-4 text-left">
+                      <h3 className="text-base font-semibold text-white group-hover:text-[#b8ff6a] transition-colors truncate">
+                        {typeof book.title === "string"
+                        ? book.title
+                        : book.title?._text || "Untitled"}
+                      </h3>
+                      <p className="text-gray-400 text-sm">
+                        {typeof book.author === "string"
+                        ? book.author
+                        : book.author?._text || "Unknown Author"}
+                      </p>
+
+                    </div>
+                  </a>
+                  ))}
           </div>
-        )}
-      </div>
-    </section>
-  );
+          )}
+        </div>
+      </section>
+      );
 }
