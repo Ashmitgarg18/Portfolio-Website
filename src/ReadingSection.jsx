@@ -1,57 +1,59 @@
 import React, { useEffect, useState } from "react";
 
-export default function ReadingSection({ title, feedUrl, noBorder = false }) {
+export default function ReadingSection({ section = "currentlyReading", title }) {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState("");
 
   useEffect(() => {
     const fetchBooks = async () => {
       try {
         const response = await fetch(
-          `https://api.codetabs.com/v1/proxy?quest=${feedUrl}`
+          "https://cdn.statically.io/gh/Ashmitgarg18/Portfolio-Website/main/public/data/books.json"
         );
-        const xmlText = await response.text();
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-        const items = Array.from(xmlDoc.querySelectorAll("item"));
+        const data = await response.json();
 
-        const parsedBooks = items.map((item) => ({
-          title: item.querySelector("title")?.textContent,
-          link: item.querySelector("link")?.textContent,
-          author:
-            item.querySelector("dc\\:creator")?.textContent ||
-            item.getElementsByTagNameNS("*", "creator")[0]?.textContent ||
-            "Unknown Author",
-          cover:
-            item.getElementsByTagName("oku:cover")[0]?.textContent ||
-            item.getElementsByTagNameNS("*", "cover")[0]?.textContent ||
-            null,
-        }));
+        if (section === "read") {
+          setBooks(data.read || []);
+        } else {
+          setBooks(data.currentlyReading || []);
+        }
 
-        setBooks(parsedBooks);
+        setLastUpdated(data.lastUpdated);
       } catch (error) {
-        console.error("Error fetching or parsing feed:", error);
+        console.error("Error fetching reading data:", error);
       } finally {
         setLoading(false);
       }
     };
 
     fetchBooks();
-  }, [feedUrl]);
+  }, [section]);
 
   return (
     <section
-      className={`py-20 px-6 bg-[#121212] ${
-        noBorder ? "" : "border-t border-gray-800"
-      }`}
+      id={section}
+      className="py-20 px-6 bg-[#121212] border-t border-gray-800"
     >
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-10 text-white">{title}</h2>
 
+        {lastUpdated && (
+          <p className="text-sm text-gray-500 mb-8">
+            Last updated: {new Date(lastUpdated).toLocaleDateString("en-IN", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })}
+          </p>
+        )}
+
         {loading ? (
-          <p className="text-gray-500">Fetching your reading list...</p>
+          <p className="text-gray-500">Loading your reading list...</p>
         ) : books.length === 0 ? (
-          <p className="text-gray-500">No books found in this collection.</p>
+          <p className="text-gray-500">
+            No books found in this section.
+          </p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
             {books.map((book, idx) => (
