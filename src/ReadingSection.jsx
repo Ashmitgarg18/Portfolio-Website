@@ -83,15 +83,16 @@ export default function ReadingSection({ section = "currentlyReading", title }) 
                       <h3 className="text-base font-semibold text-white group-hover:text-[#b8ff6a] transition-colors truncate">
                         {typeof book.title === "string"
                         ? book.title
-                        : book.title?._text || "Untitled"}
+                        : book.title?._text || book.title?.["#text"] || "Untitled"}
                       </h3>
+
                       <p className="text-gray-400 text-sm">
                         {typeof book.author === "string"
                         ? book.author
-                        : book.author?._text || "Unknown Author"}
+                        : book.author?.["#text"] || book.author?._text || "Unknown Author"}
                       </p>
-
                     </div>
+
                   </a>
                   ))}
           </div>
