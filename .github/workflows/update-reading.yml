@@ -21,26 +21,13 @@ jobs:
       - name: Install dependencies
         run: npm install fast-xml-parser node-fetch@2
 
-      - name: Fetch Oku RSS feeds
+      - name: Run update script
+        run: node .github/scripts/updateBooks.js
+
+      - name: Commit and push changes
         run: |
-          mkdir -p public/data
-          node <<'EOF'
-          const fs = require("fs");
-          const fetch = require("node-fetch");
-          const { XMLParser } = require("fast-xml-parser");
-
-          const FEEDS = {
-            currentlyReading: "https://oku.club/rss/collection/j06WR",
-            read: "https://oku.club/rss/collection/vQXqF"
-          };
-
-          const parser = new XMLParser({ ignoreAttributes: false });
-
-          async function fetchFeed(url) {
-            const response = await fetch(url);
-            const xml = await response.text();
-            const data = parser.parse(xml);
-            const items = data.rss?.channel?.item || [];
-            return items.map(i => ({
-              title: i.title,
-              author: i["dc:]()
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/books.json
+          git commit -m "Auto-update reading data" || echo "No changes to commit"
+          git push
