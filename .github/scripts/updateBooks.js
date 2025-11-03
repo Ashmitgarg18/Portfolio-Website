@@ -1,6 +1,6 @@
-const fs = require("fs");
-const fetch = require("node-fetch");
-const { XMLParser } = require("fast-xml-parser");
+import fs from "fs";
+import fetch from "node-fetch";
+import { XMLParser } from "fast-xml-parser";
 
 const FEEDS = {
   currentlyReading: "https://oku.club/rss/collection/j06WR",

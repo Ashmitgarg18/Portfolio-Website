@@ -5,27 +5,28 @@ on:
     - cron: "0 2 * * *"  # Runs every day at 2 AM UTC
   workflow_dispatch:      # Allows manual trigger
 
-jobs:
-  fetch_and_update:
-    runs-on: ubuntu-latest
+  jobs:
+    fetch_and_update:
+      runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
+      steps:
+        - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+        - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install fast-xml-parser node-fetch@2
+          - name: Install dependencies
+          run: npm install fast-xml-parser node-fetch
 
-      - name: Run update script
-        run: node .github/scripts/updateBooks.js
 
-      - name: Commit and push changes
-        run: |
+          - name: Run update script
+          run: node .github/scripts/updateBooks.js
+
+          - name: Commit and push changes
+          run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/data/books.json
