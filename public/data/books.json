@@ -1,4 +1,97 @@
 {
-  "currentlyReading": [],
-  "read": []
+  "currentlyReading": [
+    {
+      "title": "The Hobbit",
+      "author": {
+        "#text": "J.r.r. Tolkien",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/the-hobbit-by-jrr-tolkien-YWAhl",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/07/3c3f848800bb188de5a37b8ff088c62b.jpg"
+    },
+    {
+      "title": "Tiny Experiments",
+      "author": {
+        "#text": "Anne-Laure Le Cunff",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/tiny-experiments-by-anne-laure-le-cunff-W15pn",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2025/03/d45f8dcaf524539a5d8af487ae55ea64.jpeg"
+    }
+  ],
+  "read": [
+    {
+      "title": "Meditations",
+      "author": {
+        "#text": "Marcus Aurelius",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/meditations-by-marcus-aurelius-3sZoA",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/08/73457749c9771c669c0262222c3cc184.jpg"
+    },
+    {
+      "title": "Algorithms to Live By: The Computer Science of Human Decisions",
+      "author": {
+        "#text": "Brian Christian, Griffiths",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/algorithms-to-live-by-by-brian-christian-Ej6Hn",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2023/01/8c6a94d4b9dc77df04e64fd0b620ac87.jpg"
+    },
+    {
+      "title": "The School of Life",
+      "author": {
+        "#text": "The School of Life, Alain de Botton",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/the-school-of-life-by-the-school-of-life-mz3Br",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/73a640ceed2d15fa4f76d82ac8a8068f.jpg"
+    },
+    {
+      "title": "The Psychology of Money - Hardback",
+      "author": {
+        "#text": "Morgan Housel",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/the-psychology-of-money-hardback-by-morgan-housel-girYL",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/1b233c81966fe6ef50b993c35ae8da77.jpg"
+    },
+    {
+      "title": "Range",
+      "author": {
+        "#text": "David Epstein",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/range-by-david-epstein-zbmEW",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/7eef268a00a2ce616c991f942ec60e2c.jpg"
+    },
+    {
+      "title": "Mistborn Trilogy",
+      "author": {
+        "#text": "Brandon Sanderson",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/mistborn-trilogy-by-brandon-sanderson-gAs2H",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/4230a79e05dccc9241439956a59944f6.jpg"
+    },
+    {
+      "title": "Dark Matter",
+      "author": {
+        "#text": "Blake Crouch",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/dark-matter-by-blake-crouch-mqNW7",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/9cec312f655427d8b5d54b6cc3b29dff.jpg"
+    },
+    {
+      "title": "The Third Door",
+      "author": {
+        "#text": "Alex Banayan",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/the-third-door-by-alex-banayan-VFuRt",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/c374dad858183eef82b68dd96d91472a.jpg"
+    }
+  ],
+  "lastUpdated": "2025-11-03T08:07:44.757Z"
 }
