@@ -10,7 +10,7 @@ export default function ReadingSection({ section = "currentlyReading", title }) 
       try {
         const today = new Date().toISOString().slice(0, 10);
         const response = await fetch(
-          "https://cdn.statically.io/gh/Ashmitgarg18/Portfolio-Website/main/public/data/books.json?${today}"
+          "https://raw.githubusercontent.com/Ashmitgarg18/Portfolio-Website/main/public/data/books.json?${today}"
           );
         const data = await response.json();
 
