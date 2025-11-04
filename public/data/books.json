@@ -21,6 +21,33 @@
   ],
   "read": [
     {
+      "title": "The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win",
+      "author": {
+        "#text": "Maria Konnikova",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/the-biggest-bluff-by-maria-konnikova-qQCeO",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2025/11/2dff4d4531bafe3e0d026928e512a4c6.jpg"
+    },
+    {
+      "title": "How to Fail at Almost Everything and Still Win Big",
+      "author": {
+        "#text": "Scott Adams",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/how-to-fail-at-almost-everything-and-...-by-scott-adams-0BTfi",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/09/796c3113db6a346a9656e86fc38bc050.jpg"
+    },
+    {
+      "title": "Same as Ever",
+      "author": {
+        "#text": "Morgan Housel",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/same-as-ever-by-morgan-housel-yPf6L",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2024/01/ee750c91c8ee57a89bc613ca2fd4e132.jpeg"
+    },
+    {
       "title": "Yellowface",
       "author": {
         "#text": "Rebecca F. Kuang",
@@ -102,5 +129,5 @@
       "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/c374dad858183eef82b68dd96d91472a.jpg"
     }
   ],
-  "lastUpdated": "2025-11-03T08:44:56.086Z"
+  "lastUpdated": "2025-11-04T03:13:51.146Z"
 }
