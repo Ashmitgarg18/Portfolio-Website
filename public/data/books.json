@@ -21,6 +21,24 @@
   ],
   "read": [
     {
+      "title": "Wanting",
+      "author": {
+        "#text": "Luke Burgis",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/wanting-by-luke-burgis-eONPZ",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/5e75356fff99182e522acf53e1e5e6e4.jpg"
+    },
+    {
+      "title": "The Body",
+      "author": {
+        "#text": "Bill Bryson",
+        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
+      },
+      "link": "https://oku.club/book/the-body-by-bill-bryson-ZuVMQ",
+      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/07/2c6785ac7e5825bbc69db14e7481f5a4.jpg"
+    },
+    {
       "title": "The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win",
       "author": {
         "#text": "Maria Konnikova",
@@ -129,5 +147,5 @@
       "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/c374dad858183eef82b68dd96d91472a.jpg"
     }
   ],
-  "lastUpdated": "2025-11-04T03:13:51.146Z"
+  "lastUpdated": "2025-11-05T03:15:20.312Z"
 }
