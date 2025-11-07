@@ -1,24 +1,5 @@
 {
-  "currentlyReading": [
-    {
-      "title": "The Hobbit",
-      "author": {
-        "#text": "J.r.r. Tolkien",
-        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
-      },
-      "link": "https://oku.club/book/the-hobbit-by-jrr-tolkien-YWAhl",
-      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/07/3c3f848800bb188de5a37b8ff088c62b.jpg"
-    },
-    {
-      "title": "Tiny Experiments",
-      "author": {
-        "#text": "Anne-Laure Le Cunff",
-        "@_xmlns:dc": "http://purl.org/dc/elements/1.1/"
-      },
-      "link": "https://oku.club/book/tiny-experiments-by-anne-laure-le-cunff-W15pn",
-      "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2025/03/d45f8dcaf524539a5d8af487ae55ea64.jpeg"
-    }
-  ],
+  "currentlyReading": [],
   "read": [
     {
       "title": "Wanting",
@@ -147,5 +128,5 @@
       "cover": "https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/c374dad858183eef82b68dd96d91472a.jpg"
     }
   ],
-  "lastUpdated": "2025-11-06T03:18:16.061Z"
+  "lastUpdated": "2025-11-07T03:16:02.192Z"
 }
